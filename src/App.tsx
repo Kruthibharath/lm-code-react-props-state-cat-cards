@@ -102,7 +102,7 @@ function App(): JSX.Element {
     },
   ]);
   const catsCount = cats.length;
-  console.log(cats.length);
+
   return (
     <>
       <Navbar />
