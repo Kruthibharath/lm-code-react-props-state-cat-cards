@@ -12,6 +12,7 @@ import cat9 from "../assets/images/cat9.jpg";
 import cat10 from "../assets/images/cat10.jpg";
 import cat11 from "../assets/images/cat11.jpg";
 import cat12 from "../assets/images/cat12.jpg";
+import cat13 from "../assets/images/cat12.jpg";
 
 const images = [
   {
@@ -104,6 +105,14 @@ const images = [
   },
   {
     image: cat12,
+    altText: "Describe this cat!",
+    licenceType: "CC BY-SA 2.0",
+    licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
+    attributionName: "x-oph",
+    attributionUrl: "https://www.flickr.com/people/x-oph/",
+  },
+  {
+    image: cat13,
     altText: "Describe this cat!",
     licenceType: "CC BY-SA 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/",

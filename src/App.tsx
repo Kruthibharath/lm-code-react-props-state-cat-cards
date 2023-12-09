@@ -5,7 +5,6 @@ import Navbar from "./components/navbar";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { CatCard } from "./components/cat_card";
-import { CatImage } from "./components/cat_image";
 
 function App(): JSX.Element {
   // JavaScript/TypeScript code can be inserted here!
@@ -94,12 +93,20 @@ function App(): JSX.Element {
       favFoods: ["milk"],
       birthYear: 2021,
     },
+    {
+      name: "Captain Catface",
+      catIndex: 12,
+      species: "Sea Cattain",
+      favFoods: ["fish, rum"],
+      birthYear: 2016,
+    },
   ]);
-  console.log("Our pretties 😻: ", cats);
+  const catsCount = cats.length;
+  console.log(cats.length);
   return (
     <>
       <Navbar />
-      <Header />
+      <Header catsCount={catsCount} />
       <main>
         <div className="cards__wrapper">
           {cats.map((cat) => (
