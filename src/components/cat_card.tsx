@@ -111,14 +111,6 @@ const images = [
     attributionName: "x-oph",
     attributionUrl: "https://www.flickr.com/people/x-oph/",
   },
-  {
-    image: cat13,
-    altText: "Describe this cat!",
-    licenceType: "CC BY-SA 2.0",
-    licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
-    attributionName: "x-oph",
-    attributionUrl: "https://www.flickr.com/people/x-oph/",
-  },
 ];
 
 /*interface CatCardProps {
@@ -131,14 +123,16 @@ const images = [
 export const CatCard: React.FC<Cat> = (props) => (
   <div className="card">
     <h3 className="card__text card__header">{props.name}</h3>
-    <CatImage
-      image={images[props.catIndex].image}
-      altText={images[props.catIndex].altText}
-      licenceType={images[props.catIndex].licenceType}
-      licenceUrl={images[props.catIndex].licenceUrl}
-      attributionName={images[props.catIndex].attributionName}
-      attributionUrl={images[props.catIndex].attributionUrl}
-    />
+    {props.catIndex < images.length && (
+      <CatImage
+        image={images[props.catIndex].image}
+        altText={images[props.catIndex].altText}
+        licenceType={images[props.catIndex].licenceType}
+        licenceUrl={images[props.catIndex].licenceUrl}
+        attributionName={images[props.catIndex].attributionName}
+        attributionUrl={images[props.catIndex].attributionUrl}
+      />
+    )}
     <p className="card__text">{props.species}</p>
     <p className="card__text">{props.favFoods}</p>
     <p className="card__text">{props.birthYear}</p>
