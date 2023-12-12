@@ -1,4 +1,5 @@
 export default interface Cat {
+  id?: string;
   name: string;
   catIndex: number;
   species: string;

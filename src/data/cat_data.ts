@@ -1,21 +1,104 @@
-import Cat from "../data/cat";
-import { CatImage } from "./cat_image";
-import cat1 from "../assets/images/cat1.jpg";
-import cat2 from "../assets/images/cat2.jpg";
-import cat3 from "../assets/images/cat3.jpg";
-import cat4 from "../assets/images/cat4.jpg";
-import cat5 from "../assets/images/cat5.jpg";
-import cat6 from "../assets/images/cat6.jpg";
-import cat7 from "../assets/images/cat7.jpg";
-import cat8 from "../assets/images/cat8.jpg";
-import cat9 from "../assets/images/cat9.jpg";
-import cat10 from "../assets/images/cat10.jpg";
-import cat11 from "../assets/images/cat11.jpg";
-import cat12 from "../assets/images/cat12.jpg";
+import Cat from "./cat";
+import { CatImage } from "../components/cat_image";
+import { v4 as uuidv4 } from "uuid";
 
-const images = [
+export const catData: Array<Cat> = [
   {
-    image: cat1,
+    name: "Little Miss Purrfect",
+    catIndex: 0,
+    species: "Cat",
+    favFoods: ["wet food", "dry food"],
+    birthYear: 2016,
+  },
+  {
+    name: "Mr Gwumpy",
+    catIndex: 1,
+    species: "Cat",
+    favFoods: ["caviar"],
+    birthYear: 2016,
+  },
+  {
+    name: "Dopey",
+    catIndex: 2,
+    species: "Cat",
+    favFoods: ["bugs"],
+    birthYear: 2018,
+  },
+  {
+    name: "Jumpy",
+    catIndex: 3,
+    species: "Scaredy Cat",
+    favFoods: ["not cucumbers!"],
+    birthYear: 2008,
+  },
+  {
+    name: "Meowsalot",
+    catIndex: 4,
+    species: "Cat",
+    favFoods: ["tuna", "catnip", "celery"],
+    birthYear: 2012,
+  },
+  {
+    name: "Cindy Clawford",
+    catIndex: 5,
+    species: "Cat",
+    favFoods: ["mice"],
+    birthYear: 2012,
+  },
+  {
+    name: "Katy Purry",
+    catIndex: 6,
+    species: "Cat",
+    favFoods: ["cigarettes", "coffee"],
+    birthYear: 2015,
+  },
+  {
+    name: "Dr. Von Belly-Rub",
+    catIndex: 7,
+    species: "Cat",
+    favFoods: ["salt"],
+    birthYear: 2020,
+  },
+  {
+    name: "Blobby",
+    catIndex: 8,
+    species: "Bird?",
+    favFoods: ["your soul"],
+    birthYear: 2020,
+  },
+  {
+    name: "El Taco",
+    catIndex: 9,
+    species: "Cat",
+    favFoods: ["tequila", "bar snax"],
+    birthYear: 1995,
+  },
+  {
+    name: "Nibbles",
+    catIndex: 10,
+    species: "Hungry Cat",
+    favFoods: ["blankets", "feet", "tinsel"],
+    birthYear: 2003,
+  },
+  {
+    name: "BoopySnoot",
+    catIndex: 11,
+    species: "Tiny Cat",
+    favFoods: ["milk"],
+    birthYear: 2021,
+  },
+  {
+    name: "Captain Catface",
+    catIndex: 12,
+    species: "Sea Cattain",
+    favFoods: ["fish, rum"],
+    birthYear: 2016,
+  },
+];
+catData.forEach((cat) => (cat.id = uuidv4()));
+
+export const images = [
+  {
     altText: "Describe this cat!",
     licenceType: "CC BY-SA 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -23,7 +106,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/amblin/",
   },
   {
-    image: cat2,
     altText: "Describe this cat!",
     licenceType: "CC BY-SA 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -31,7 +113,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/ivva/",
   },
   {
-    image: cat3,
     altText: "Describe this cat!",
     licenceType: "CC BY-ND 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by-nd/2.0/",
@@ -39,7 +120,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/rachephotos/",
   },
   {
-    image: cat4,
     altText: "Describe this cat!",
     licenceType: "CC BY 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by/2.0/",
@@ -47,7 +127,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/renarl/",
   },
   {
-    image: cat5,
     altText: "Describe this cat!",
     licenceType: "CC BY-SA 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -55,7 +134,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/x-oph/",
   },
   {
-    image: cat6,
     altText: "Describe this cat!",
     licenceType: "CC BY-ND 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by-nd/2.0/",
@@ -63,7 +141,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/21851382@N04/",
   },
   {
-    image: cat7,
     altText: "Describe this cat!",
     licenceType: "CC BY 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by/2.0/",
@@ -71,7 +148,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/pavlovskyy/",
   },
   {
-    image: cat8,
     altText: "Describe this cat!",
     licenceType: "CC BY 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by/2.0/",
@@ -79,7 +155,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/darthale/",
   },
   {
-    image: cat9,
     altText: "Describe this cat!",
     licenceType: "CC BY 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by/2.0/",
@@ -87,7 +162,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/24039825@N06/",
   },
   {
-    image: cat10,
     altText: "Describe this cat!",
     licenceType: "CC BY 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by/2.0/",
@@ -95,7 +169,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/29638108@N06/",
   },
   {
-    image: cat11,
     altText: "Describe this cat!",
     licenceType: "CC BY-SA 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -103,7 +176,6 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/4braham/",
   },
   {
-    image: cat12,
     altText: "Describe this cat!",
     licenceType: "CC BY-SA 2.0",
     licenceUrl: "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -111,37 +183,10 @@ const images = [
     attributionUrl: "https://www.flickr.com/people/x-oph/",
   },
 ];
+// catData.forEach((cat, index) => {
+//   const id = uuidv4();
+//   cat.id = id;
+//   CatImage[index].id = id;
+// });
 
-/*interface CatCardProps {
-  name: string;
-  species: string;
-  favFoods: Array<string>;
-  birthYear: number;
-}*/
-
-export const CatCard: React.FC<Cat> = ({
-  name,
-  species,
-  favFoods,
-  birthYear,
-  catIndex,
-}) => {
-  return (
-    <div className="card">
-      <h3 className="card__text card__header">{name}</h3>
-      {catIndex < images.length && (
-        <CatImage
-          image={images[catIndex].image}
-          altText={images[catIndex].altText}
-          licenceType={images[catIndex].licenceType}
-          licenceUrl={images[catIndex].licenceUrl}
-          attributionName={images[catIndex].attributionName}
-          attributionUrl={images[catIndex].attributionUrl}
-        />
-      )}
-      <p className="card__text">{species}</p>
-      <p className="card__text">{favFoods}</p>
-      <p className="card__text">{birthYear}</p>
-    </div>
-  );
-};
+//export default catData;

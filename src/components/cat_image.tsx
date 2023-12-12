@@ -1,4 +1,5 @@
 interface CatImageProps {
+  //id?: string;
   image: string;
   altText: string;
   licenceType: string;
@@ -6,8 +7,8 @@ interface CatImageProps {
   attributionName?: string;
   attributionUrl?: string;
 }
-
 export const CatImage: React.FC<CatImageProps> = ({
+  //id,
   image,
   altText,
   licenceType,
